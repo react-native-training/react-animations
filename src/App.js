@@ -1,67 +1,43 @@
 import React, { Component } from 'react';
 
-import { VelocityComponent } from 'velocity-react';
-
-const VelocityLetter = ({ letter }) => (
-  <VelocityComponent
-    runOnMount
-    animation={{ opacity: 1, marginTop: 0 }}
-    delay={1}
-    duration={500}
-  >
-    <p style={styles.letter}>{letter}</p>
-  </VelocityComponent>
-)
+import { TweenMax, TimelineLite } from 'gsap';
 
 class App extends Component {
-  state = {
-    letters: [],
+  animate = () => {
+    var animation = new TimelineLite()
+    animation
+      .to(this.box, 1, { x: 200 })
+      .to(this.box, 1, { y: 200 })
+      .to(this.box, 1, { x: 0 })
+      .to(this.box, 1, { y: 0 })
   }
-  onChange = (e) => {
-    const letters = e.target.value.split('');
-    const arr = []
-    letters.forEach((l, i) => {
-      arr.push(<VelocityLetter letter={l} />)
-    })
-    this.setState(() => ({ letters: arr }))
-  }
-  
   render() {
     return (
-      <div className="App">
-        <div className="container">
-          <input onChange={this.onChange} style={styles.input} />
-          <div style={styles.letters}>
-            {
-              this.state.letters
-            }
-          </div>
-        </div>
+      <div style={styles.container}>
+        <button style={styles.button} onClick={this.animate}>Animate</button>
+        <div style={styles.box} ref={box => this.box = box} className="box" />
       </div>
-    );
+    )
   }
 }
 
 const styles = {
-  input: {
-    height: 40,
-    backgroundColor: '#ddd',
+  button: {
     width: 200,
+    height: 45,
     border: 'none',
     outline: 'none',
-    marginBottom: 20,
-    fontSize: 22,
-    padding: 8,
   },
-  letters: {
-    display: 'flex',
-    height: 140,
+  container: {
+    padding: 100,
   },
-  letter: {
-    opacity: 0,
-    marginTop: 100,
-    fontSize: 22,
-    whiteSpace: 'pre',
+  box: {
+    marginTop: 10,
+    width: 100,
+    height: 100,
+    backgroundColor: '#ffc107',
+    borderRadius: 4,
+    boxShadow: '1px 1px 27px rgba(0, 0, 0, .3)'
   }
 }
 
