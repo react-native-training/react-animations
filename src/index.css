@@ -11,6 +11,7 @@ body {
 .container {
   max-width: 500px;
   padding: 50px;
+  height: 350px;
   box-shadow: 1px 1px 14px rgba(0, 0, 0, .4); 
 }
 
