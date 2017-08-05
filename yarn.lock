@@ -87,6 +87,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animated@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/animated/-/animated-0.2.0.tgz#1a0e96f097b3fbc5b64d7eddc723bcc0a6f97633"
+  dependencies:
+    invariant "^2.2.0"
+    normalize-css-color "^1.0.1"
+
 anser@1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.2.5.tgz#5dcfc956eaa373b9c23010dd20dabec2ce19475b"
@@ -4128,6 +4135,10 @@ nopt@^4.0.1:
     abbrev "1"
     osenv "^0.1.4"
 
+normalize-css-color@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/normalize-css-color/-/normalize-css-color-1.0.2.tgz#02991e97cccec6623fe573afbbf0de6a1f3e9f8d"
+
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.4.0.tgz#12f95a307d58352075a04907b84ac8be98ac012f"
@@ -4924,7 +4935,7 @@ react-dev-utils@^3.0.2:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@15.6.1:
+react-dom@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -4987,7 +4998,7 @@ react-scripts@1.0.10:
   optionalDependencies:
     fsevents "1.1.2"
 
-react@15.6.1:
+react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
